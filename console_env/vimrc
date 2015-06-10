@@ -1,0 +1,10 @@
+set ts=4
+set sw=4
+set autoindent
+set cindent
+set number
+
+set tags+=/root/android-google/c_tags
+set tags+=/root/android-google/asm_tags
+set tags+=/root/android-google/java_tags
+set tags+=/usr/src/tegra/tags
