@@ -8,3 +8,5 @@ set tags+=/root/android-google/c_tags
 set tags+=/root/android-google/asm_tags
 set tags+=/root/android-google/java_tags
 set tags+=/usr/src/tegra/tags
+
+let Tlist_Display_Prototype = 1
