@@ -1,0 +1,19 @@
+#/bin/bash
+
+alias j=jobs
+alias g='grep -rn --exclude-dir=.git'
+alias f='find . -name'
+alias d='dirs -v'
+alias p='pushd .'
+export PATH=$PATH:~/ryan_backup/bin
+alias ctags='~/ryan_backup/bin/ctags'
+
+gcd ()
+{
+    dirs -v;
+    echo "# :?";
+    read cnt;
+    cd `dirs +$cnt -l `
+
+}
+

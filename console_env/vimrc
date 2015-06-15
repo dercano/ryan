@@ -1,12 +1,42 @@
-set ts=4
-set sw=4
-set autoindent
-set cindent
 set number
+set nocp
+set ts=4
+set expandtab
+set incsearch
+set sw=4
+au BufReadPost *
+\ if line("'\"") > 0 && line("'\"") <= line("$") |
+\   exe "norm g`\"" |
+\ endif
 
-set tags+=/root/android-google/c_tags
-set tags+=/root/android-google/asm_tags
-set tags+=/root/android-google/java_tags
-set tags+=/usr/src/tegra/tags
+set hls
+set nows
+set ic
+set scs
+set ls=2
 
-let Tlist_Display_Prototype = 1
+if filereadable("./tags")
+set tags=./tags,tags
+endif
+
+if filereadable("./cscope.out")
+    cs add cscope.out
+endif
+
+map th :tabprev
+map tl :tabnext
+map tn :tabnew
+map td :tabclose
+map tl :Tlist
+
+map <F10> :BufExplorer <CR>
+map <F11> ^]
+map <F12> ^T
+
+nnoremap <F5> :GundoToggle<CR>
+
+map di :30vs ./ <CR>
+map fl :BufExplorer <CR>
+
+let Tlist_Ctags_Cmd="~/ryan_backup/bin/ctags"
+let Tlist_Auto_Open = 1
