@@ -1,3 +1,5 @@
+syntax on
+
 set number
 set nocp
 set ts=4
