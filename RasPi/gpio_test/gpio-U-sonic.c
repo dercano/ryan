@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <wiringPi.h>
 
-#define TRIG 3
-#define ECHO 2
+#define TRIG 4
+#define ECHO 3
 
 int main(void)
 {

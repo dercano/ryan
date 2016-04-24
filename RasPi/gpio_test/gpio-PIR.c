@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <wiringPi.h>
 
-# define PIR 0
+# define PIR 1
 
 int main(void)
 {
@@ -14,10 +14,10 @@ int main(void)
 	{
 		if(digitalRead(PIR) == 0)
 		{
-			printf("Detection\n");
+			//printf("Not Detection\n");
 			delay(1000);
 		} else {
-			printf("Not Deteced\n");
+			printf("Deteced!!\n");
 			delay(1000);
 		}
 	}
